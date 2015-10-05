@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,11 +27,11 @@ namespace NerdStar
 
         private static void Loading_OnLoadingComplete(EventArgs args)
         {
-            TargetSelector2.init();
+            TargetSelector2.init(null);
             Bootstrap.Init(null);
 
             Q = new Spell.Active(SpellSlot.Q);
-            W = new Spell.Targeted(SpellSlot.W, 630); // reduced the range so it will rarely miss the combo
+            W = new Spell.Targeted(SpellSlot.W, 620); // reduced the range so it will rarely miss the combo
 
             AliMenu = MainMenu.AddMenu("NerdStar", "NerdStar");
             AliMenu.AddGroupLabel("NerdStar");
@@ -55,7 +55,7 @@ namespace NerdStar
             Game.OnTick += Game_OnTick;
 			Interrupter.OnInterruptableSpell += StateHandler.Interrupter_OnInterruptableSpell;
 
-            EloBuddy.Chat.Print("NerdStar : Thanks for using my script! Enjoy the game!");
+            EloBuddy.Chat.Print("ALISTAR COMBO NÃO FUNCIONANDO DIREITO");
         }
 
         private static void Game_OnTick(EventArgs args)
